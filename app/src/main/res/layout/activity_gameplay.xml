@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#2c3e50"
+    tools:context=".GamePlayActivity">
+
+    <ImageView
+
+        android:id="@+id/idSUSDLogo"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+
+        android:layout_margin="16dp"
+        android:src="@drawable/ic_launcher_background"
+
+        app:layout_constraintBottom_toTopOf="@id/horizontalViewAfterLogo"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        />
+
+    <View
+        android:id="@+id/horizontalViewAfterLogo"
+        android:layout_width="0dp"
+        android:layout_height="0.01dp"
+
+        app:layout_constraintBottom_toTopOf="@id/idLeftDiceImageView"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/idSUSDLogo" />
+
+    <ImageView
+
+        android:id="@+id/idLeftDiceImageView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+
+        android:src="@drawable/dice_figure_6"
+
+        app:layout_constraintBottom_toTopOf="@id/idRollBtn"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toLeftOf="@id/idRightDiceImageView"
+        app:layout_constraintTop_toBottomOf="@id/horizontalViewAfterLogo"
+
+
+        />
+
+    <ImageView
+
+        android:id="@+id/idRightDiceImageView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+
+        android:src="@drawable/dice_figure_6"
+
+        app:layout_constraintBottom_toTopOf="@id/idRollBtn"
+        app:layout_constraintLeft_toRightOf="@id/idLeftDiceImageView"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/horizontalViewAfterLogo"
+
+        />
+
+    <!--    SEVEN UP SEVEN DOWN:
+            __________
+            SevenUp TextView
+            Switch
+            SevenDown TextView
+            __________
+
+            additional property for concern:
+            app:layout_constraintVertical_weight="1"
+
+
+        <TextView
+            android:id="@+id/idSevenUpTextView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+
+            android:background="@color/colorPrimaryDark"
+            android:gravity="center"
+            android:text="@string/seven_up"
+            android:textSize="24sp"
+
+            app:layout_constraintBottom_toTopOf="@id/idRollBtn"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toLeftOf="@id/idSUSDSwitch"
+            app:layout_constraintTop_toBottomOf="@id/idLeftDiceImageView"
+
+            />
+
+        <Switch
+            android:id="@+id/idSUSDSwitch"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@color/colorPrimaryDark"
+            android:checked="true"
+
+            app:layout_constraintBottom_toTopOf="@id/idRollBtn"
+            app:layout_constraintLeft_toRightOf="@id/idSevenUpTextView"
+            app:layout_constraintRight_toLeftOf="@id/idSevenDownTextView"
+            app:layout_constraintTop_toBottomOf="@id/idLeftDiceImageView"
+
+            />
+
+
+        <TextView
+            android:id="@+id/idSevenDownTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+
+            android:gravity="center"
+            android:text="@string/seven_down"
+            android:textSize="24sp"
+
+            app:layout_constraintBottom_toTopOf="@id/idRollBtn"
+            app:layout_constraintLeft_toRightOf="@id/idSUSDSwitch"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/idLeftDiceImageView"
+
+            />
+
+    -->
+
+
+    <Button
+        android:id="@+id/idRollBtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="100dp"
+        android:layout_marginEnd="100dp"
+        android:layout_marginBottom="64dp"
+
+        android:background="@color/colorPrimary"
+        android:text="@string/roll_btn"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/idLeftDiceImageView"
+
+        />
+
+</android.support.constraint.ConstraintLayout>
