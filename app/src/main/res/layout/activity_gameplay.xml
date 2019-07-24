@@ -16,7 +16,7 @@
         android:layout_margin="16dp"
         android:src="@drawable/seven_up_seven_down_logo_2"
 
-        app:layout_constraintBottom_toTopOf="@id/horizontalViewAfterLogo"
+        app:layout_constraintBottom_toTopOf="@id/idDividerHorizontalBelowLogo"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -24,14 +24,16 @@
         />
 
     <View
-        android:id="@+id/horizontalViewAfterLogo"
+        android:id="@+id/idDividerHorizontalBelowLogo"
         android:layout_width="0dp"
         android:layout_height="0.01dp"
 
         app:layout_constraintBottom_toTopOf="@id/idLeftDiceImageView"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/idSUSDLogo" />
+        app:layout_constraintTop_toBottomOf="@id/idSUSDLogo"
+
+        />
 
     <ImageView
 
@@ -39,18 +41,14 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
 
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp"
+        android:layout_margin="16dp"
 
         android:src="@drawable/dice_figure_6"
 
-        app:layout_constraintBottom_toTopOf="@id/idRollBtn"
+        app:layout_constraintBottom_toTopOf="@id/idDividerHorizontalBetweenDiceAndRollBtn"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toLeftOf="@id/idRightDiceImageView"
-        app:layout_constraintTop_toBottomOf="@id/horizontalViewAfterLogo"
-
+        app:layout_constraintTop_toBottomOf="@id/idDividerHorizontalBelowLogo"
 
         />
 
@@ -60,17 +58,14 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
 
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp"
+        android:layout_margin="16dp"
 
         android:src="@drawable/dice_figure_6"
 
-        app:layout_constraintBottom_toTopOf="@id/idRollBtn"
+        app:layout_constraintBottom_toTopOf="@id/idDividerHorizontalBetweenDiceAndRollBtn"
         app:layout_constraintLeft_toRightOf="@id/idLeftDiceImageView"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/horizontalViewAfterLogo"
+        app:layout_constraintTop_toBottomOf="@id/idDividerHorizontalBelowLogo"
 
         />
 
@@ -135,12 +130,24 @@
 
     -->
 
+    <View
+        android:id="@+id/idDividerHorizontalBetweenDiceAndRollBtn"
+        android:layout_width="0dp"
+        android:layout_height="0.01dp"
+
+        app:layout_constraintBottom_toTopOf="@id/idRollBtn"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/idLeftDiceImageView"
+
+        />
 
     <Button
         android:id="@+id/idRollBtn"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
 
+        android:layout_marginTop="16dp"
         android:layout_marginStart="100dp"
         android:layout_marginEnd="100dp"
         android:layout_marginBottom="64dp"
@@ -153,8 +160,21 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/idLeftDiceImageView"
+        app:layout_constraintTop_toBottomOf="@id/idDividerHorizontalBetweenDiceAndRollBtn"
 
         />
+
+    <!--
+        <View
+            android:id="@+id/idDividerHorizontalBelowRollBtn"
+            android:layout_width="0dp"
+            android:layout_height="0.01dp"
+
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/idRollBtn" />
+    -->
+
 
 </android.support.constraint.ConstraintLayout>

@@ -11,6 +11,7 @@ import java.security.SecureRandom;
 
 public class GamePlayActivity extends AppCompatActivity {
 
+    private final String TAG_GamePlayActivity = "GamePlayActivity_#1";
     ImageView leftDiceImageView;
     ImageView rightDiceImageView;
     Button rollBtn;
@@ -29,6 +30,7 @@ public class GamePlayActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_gameplay);
 
+        Log.d(TAG_GamePlayActivity, "<onCreate> App Started.");
         major();
 
     }
@@ -53,23 +55,32 @@ public class GamePlayActivity extends AppCompatActivity {
 
         randomNumber = random.nextInt(MAX_DICE_VALUE);
         leftDiceImageView.setImageResource(diceArray[randomNumber]);
-        Log.d("debug_1", "Random number - Left  : " + randomNumber);
+        Log.d(TAG_GamePlayActivity, "Random number - Left  : " + randomNumber);
 
         randomNumber = random.nextInt(MAX_DICE_VALUE);
         rightDiceImageView.setImageResource(diceArray[randomNumber]);
-        Log.d("debug_1", "Random number - Right : " + randomNumber);
+        Log.d(TAG_GamePlayActivity, "Random number - Right : " + randomNumber);
 
     }
 }
 
 /*
- *  Time Stamp: 10th May 2K19, 05:30 PM..!!
+ *  Date Created  : 10th May 2K19, 01:41 PM..!!
+ *  Last Modified : 24th July 2K19, 09:54 PM..!!
  *
  *  Project Name    :   Seven Up Seven Down
  *  Status          :   Work In Progress
  *  ____________________________________________________________________
  *
  *  Change Log:
+ *  ____________________________________________________________________
+ *
+ *  3rd Commit: [Updated Launcher Icon]
+ *
+ *  1. GamePlayActivity - XML Optimized.
+ *  2. Launcher Icon Changed.
+ *  3. Replaced Hardcoded log tags with TAG_GamePlayActivity variable.
+ *  ____________________________________________________________________
  *
  *  2nd Commit: [rollBtnClicked - GamePlayActivity]
  *  Description: Linked the layout of the GamePlayActivity with its Java class &
